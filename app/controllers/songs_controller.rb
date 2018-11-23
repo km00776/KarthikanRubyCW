@@ -10,11 +10,11 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = Song.new
+    @song = current_user.songs.build
   end
 
   def create
-    @song = Song.new(song_params)
+    @song = current_user.songs.build(song_params)
 
     if @song.save
       redirect_to root_path

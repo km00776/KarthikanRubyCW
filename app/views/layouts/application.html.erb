@@ -26,6 +26,12 @@
 
       </ul>
 
+      <ul class="nav navbar-nav  navbar-right">
+        <% if user_signed_in? %>
+        <li><%= link_to "Add Song", new_song_path  %></li>
+          <% end %>
+        </ul>
+
 
       </div>
 

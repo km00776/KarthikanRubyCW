@@ -3,7 +3,7 @@ class CreateSongs < ActiveRecord::Migration
     create_table :songs do |t|
       t.string :title
       t.text :description
-      t.string :author
+      t.string :artist
 
       t.timestamps null: false
     end

@@ -1,4 +1,13 @@
-<% @songs.each do |song| %>
-  <h2><%= link_to song.title, song_path(song) %></h2>
+<h1 class="current-category"><%= params[:category] %></h1>
 
+
+<% if @songs.count == 0 %>
+
+<h1> There are no songs currently in this category </h1>
+
+<% else %>
+
+  <% @songs.each do |song| %>
+    <h2><%= link_to song.title, song_path(song) %></h2>
+    <% end %>
 <% end %>
